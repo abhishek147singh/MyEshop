@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install --prefix world && npm run build --prefix world"
+    "build": "cd world && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
