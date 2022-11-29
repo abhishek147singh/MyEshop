@@ -6,7 +6,7 @@ import multer from "multer";
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, './world/public/images')
+      cb(null, 'build/images')
     },
     filename: function (req, file, cb) {
       cb(null, file.originalname)
@@ -106,7 +106,7 @@ productRouter.post("/admin/create", isAuth, upload.single("image") , expressAsyn
             const newProduct = new Product({
                 name: req.body.name,
                 price: req.body.price,
-                imageSrc: 'images/' + req.file.originalname,
+                imageSrc: '/images/' + req.file.originalname,
                 category: req.body.category,
                 brand: req.body.brand,
                 discreption: req.body.discription,
