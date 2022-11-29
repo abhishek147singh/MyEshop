@@ -6,7 +6,7 @@ import multer from "multer";
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'build/images')
+      cb(null, 'world/build/images')
     },
     filename: function (req, file, cb) {
       cb(null, file.originalname)
