@@ -24,7 +24,7 @@ export default function MultiActionAreaCard(props) {
         }
     }
 
-    const path = window.location.origin + "/"+ imageSrc;
+    const path = window.location.origin + imageSrc;
 
     return (
         <Card sx={{ m: 1, maxWidth: 345 }}>
