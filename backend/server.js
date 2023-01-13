@@ -18,7 +18,6 @@ mongoose.connect(process.env.MONGOODB_URL).then(() => {
 
 app.use(express.json());
 app.use(express.urlencoded({extended : true }));
-
 app.use('/api/seed/' , seedRouter );
 app.use('/api/products' , productRouter);
 app.use('/api/users' , userRouter);
@@ -36,7 +35,6 @@ app.get("/api/keys/paypal" , (req , res) => {
 if(process.env.NODE_ENV  == "production"){
     app.use(express.static("world/build"));
 }
-
 
 app.listen(process.env.PORT || 5000 , () => {
     console.log("server is running");
